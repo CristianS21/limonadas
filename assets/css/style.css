@@ -15,6 +15,7 @@ html {
 .page{
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .contenedor-1{
@@ -39,7 +40,6 @@ header {
 
 .lista{
     display: flex;
-   
 }
 
 .lista li{
@@ -74,12 +74,11 @@ header {
 
 .c1-contenido {
     width: 50%;
-
+    padding-top: 30px;
 }
 
 .c1-img {
     width: 50%;
-
     display: flex;
     justify-content: center;
     align-content: center;
@@ -87,7 +86,7 @@ header {
 }
 .c1-img img{
     width: 85%;  
-    margin-right: 38px;
+    padding: 15px;
     filter: drop-shadow( 1px 1px 10px rgb(242, 210, 210));
 }
 
@@ -98,7 +97,7 @@ header {
     justify-content: center;
 }
 
-.c1-contenedor .c1-contenido h1{
+ .c1-contenido h1{
     color: #ffffff;
     font-size: 131px;
     line-height: 106px;
@@ -129,7 +128,75 @@ header {
 }
 
 
+@media (max-width: 950px){
+    .c1-contenedor {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .c1-contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .c1-img {
+        width: 100%;
+    }
+
+    .c1-img img{
+        width: 50%;
+    }
+
+    .c1-contenido h1 {
+        font-size: 150px;
+        line-height: 117px;
+    }
+    
+    
+    .c1-contenido p {
+        color: #3f3f3f;
+        width: 550px;
+        line-height: 30px;
+        font: 20px;
+    }
+
+    @media (max-width: 750px){
+        .lista {
+            display: none;
+        }
+    }
+
+    @media (max-width: 635px){
+        .c1-contenido h1{
+            font-size: 100px;
+            line-height: 95px;
+        }
+
+        .c1-contenido p {
+            color: #3f3f3f;
+            width: 360px;
+            line-height: 25px;
+        }
+
+        .c1-contenido a{
+            padding: 13px 45px;
+            letter-spacing: 4px;
+            margin-top: 25px;
+        }
+        .c1-img img{
+            width: 80%;
+        }
+    }
+}
+
 /*CONTENEDOR - 2*/
+
 .contenedor-2{
     background: linear-gradient(180deg,
     rgba(255, 255, 255, 0.75) 0%,
@@ -141,7 +208,6 @@ header {
     display: flex;
     position: relative;
 }
-
 
 .c2-cont-img {
     width: 50%;
@@ -215,6 +281,27 @@ header {
    width: 180px;
 } 
 
+@media (max-width: 950px){
+    .c2{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .c2-contenido{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
+    }
+
+    .c2-cont-img img{
+        margin-top: 25px;
+    }
+}
+
 /*CONTENEDOR-3*/
 
 .contenedor-3{
@@ -227,34 +314,31 @@ header {
 
 .c3-encabezado{
     margin-bottom: 30px;
-    width: 650px;
     position: relative;
 }
 
 .c3-encabezado .ornamento1-a{
     position:absolute;
     top: 0px;
-   right: 0px;    
-   width: 40px;
-   rotate: 50deg;
+    right: 160px;    
+    width: 40px;
+    rotate: 50deg;
 }
 
 .c3-encabezado .ornamento1-b{
     position:absolute;
     top: 0px;
-    left: 0px;    
+    left: 175px;    
     width: 40px;
     rotate: 140deg;
 }
 .c3-encabezado .ornamento2{
     position:absolute;
     bottom: -155px;
-    left: -40px;  
+    left: 175px;  
     width: 220px;
-    rotate: 164deg;
+    rotate: 160deg;
 }
-
-
 
 .c3-encabezado h2{
     color: #3f3f3f;
@@ -263,6 +347,7 @@ header {
     margin-bottom: 25px;
     text-align: center;
 }
+
 .c3-encabezado p{
     color: #3f3f3f;
     line-height: 25px;
@@ -270,24 +355,27 @@ header {
     text-align: center;
 }
 
-
 .c3-cont-contenido{
     margin-bottom: 55px;
+    display: flex;
+    justify-content: center;
+    
 }
 
 .c3-tabla {
-    width: 700px;
+    width: 650px;
     padding: 25px 25px 65px;
     box-shadow: 1px 1px 20px rgb(94, 94, 94);
     text-align: center;
     margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .tabla {
-    width: 100%;
-    display: flex;
-    text-align: left;
-    justify-content: center;
     border-collapse: collapse;
 }
 
@@ -313,7 +401,6 @@ header {
     padding: 10px 50px;
 }
 
-
 .c3-tabla span {
     font-size: 40px;
     color: #aa7d5e;
@@ -325,14 +412,11 @@ header {
     margin-bottom: 30px;
 }
 
-
-
 .c3-form h2 {
     font-size: 60px;
     color: #3f3f3f;
     margin-bottom: 30px;
     text-align: center;
- 
 }
 
 form {
@@ -372,6 +456,135 @@ form {
     background-color: #ffffff;
     color: #e56820;
 }
+
+@media (max-width: 780px){
+    .c3-tabla {
+        width: 600px;
+        padding: 25px 0;
+    }
+
+    .c3-cont-contenido{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .c3-encabezado .ornamento2 {
+        position: absolute;
+        bottom: -165px;
+        left: 0;
+        width: 160px;
+        rotate: 154deg;
+    }
+
+    @media (max-width: 700px){
+        .contenedor-3{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 30px;
+        }
+        .c3-encabezado{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .c3-encabezado h2{
+            width: 340px;
+            line-height: 56px;
+        }
+        
+        .c3-encabezado p{
+            width: 340px;
+        }
+
+        .c3-encabezado .ornamento1-a{
+            position:absolute;
+            top: 0px;
+            right: 120px;    
+            width: 40px;
+            rotate: 50deg;
+        }
+
+        .c3-encabezado .ornamento1-b{
+            position:absolute;
+            top: 0px;
+            left: 120px;    
+            width: 40px;
+            rotate: 50deg;
+        }
+
+        .c3-form {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 75px;
+        }
+
+        .formulario {
+            width: 360px;
+        }
+
+        .formulario h2 {
+            line-height: 54px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+
+    @media (max-width: 600px){
+        .c3-tabla {
+            width: 470px;
+            padding: 25px 0;
+        }
+
+        .tabla td{
+            padding: 5px 20px;
+        }
+        
+        .c3-tabla span {
+            font-size: 40px;
+            color: #aa7d5e;
+        }
+        
+        .c3-tabla h3 {
+            font-size: 60px;
+            color: #3f3f3f;
+            margin-bottom: 30px;
+        }
+
+        .c3-encabezado .ornamento2 {
+            position: absolute;
+            bottom: -165px;
+            left: 100px;
+            width: 111px;
+            rotate: 154deg;
+        }
+        .c3-cont-contenido{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 530px){
+        .c3-tabla {
+            width: 440px;
+            padding: 25px 0;
+        }
+    }
+}
+
 
 /*CONTENEDOR 4 */
 
@@ -426,4 +639,15 @@ form {
     letter-spacing: 3px;
     margin-top: 80px;
     font-weight: bold;
+}
+
+@media (max-width: 850px){
+    .c4-contenidos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 60px 30px;
+        gap: 50px;
+    }
 }
