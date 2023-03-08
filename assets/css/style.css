@@ -131,8 +131,6 @@ header {
 }
 
 .burguer {
-    width: 45px;
-    color: #f55442;
     display: none;
 }
 
@@ -181,6 +179,10 @@ header {
 
         .burguer {
             display: block;
+            width: 65px;
+            height: 65px;
+            color: #f55442;
+            margin-right: 50px;
         }
 
         .burguer:hover+ul{
@@ -213,6 +215,15 @@ header {
             text-decoration: none;
         }
 
+        .redes {
+            display: none;
+        }
+
+        .logo {
+            width: 78px;
+            padding-left: 30px;
+        }
+        
     }
 
    
