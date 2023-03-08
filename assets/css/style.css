@@ -15,7 +15,6 @@ html {
 .page{
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 .contenedor-1{
@@ -25,6 +24,7 @@ html {
     rgba(255,179,32,1) 100%);
     min-height: 90vh;
     padding-bottom: 60px;
+    position: relative;
 }
 
 header {
@@ -36,6 +36,7 @@ header {
 
 .logo {
     width: 58px;
+    padding-left: 20px;
 }
 
 .lista{
@@ -60,6 +61,7 @@ header {
 .redes{
     display: flex;
     gap: 10px;
+    padding-right: 20px;
 }
 
 .redes img {
@@ -75,6 +77,7 @@ header {
 .c1-contenido {
     width: 50%;
     padding-top: 30px;
+    padding-left: 20px;
 }
 
 .c1-img {
@@ -86,7 +89,7 @@ header {
 }
 .c1-img img{
     width: 85%;  
-    padding: 15px;
+    padding: 30px 15px 15px;
     filter: drop-shadow( 1px 1px 10px rgb(242, 210, 210));
 }
 
@@ -115,7 +118,7 @@ header {
     padding: 13px 50px;
     background-color: #f55442 ;
     color: #ffffff;
-    border-radius: 50px;
+    border-radius:50px;
     letter-spacing: 8px;
     margin-top: 25px;
     text-decoration: none;
@@ -127,6 +130,13 @@ header {
     border: solid 1px #f55442;
 }
 
+.burguer {
+    width: 45px;
+    color: #f55442;
+    display: none;
+}
+
+
 
 @media (max-width: 950px){
     .c1-contenedor {
@@ -135,6 +145,7 @@ header {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        position: relative;
         
     }
 
@@ -167,14 +178,62 @@ header {
     }
 
     @media (max-width: 750px){
-        .lista {
-            display: none;
+
+        .burguer {
+            display: block;
         }
+
+        .burguer:hover+ul{
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+        
+        .lista {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: -250px;
+            background-color: rgba(245, 84, 66,.9);
+            z-index: 1;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .lista:hover{
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+
+        .lista li a{
+            color: 255,179,32,1;
+            color: rgba(251,205,49);
+            text-decoration: none;
+        }
+
     }
 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
     @media (max-width: 635px){
         .c1-contenido h1{
-            font-size: 100px;
+            font-size: 120px;
             line-height: 95px;
         }
 
@@ -192,6 +251,18 @@ header {
         .c1-img img{
             width: 80%;
         }
+
+        .c1-contenido p {
+         
+            width: 300px;
+    }
+    }
+    @media (max-width: 450px){
+        .c1-contenido{
+            width: 350px;
+        }
+        .c1-contenido h1{
+            font-size: 100px;}
     }
 }
 
@@ -202,6 +273,7 @@ header {
     rgba(255, 255, 255, 0.75) 0%,
     rgb(240, 240, 240) 50%,
     rgba(225, 225, 225) 100%);
+    padding: 30px 0;
 }
 
 .c2 {
@@ -261,15 +333,15 @@ header {
  .ornamento1-a{
      position:absolute;
      top: 10px;
-    right: 60px;    
+    right: 0;    
     width: 80px;
-    rotate: 220deg;
+    rotate: 200deg;
  }
 
  .ornamento1-b{
     position:absolute;
     top: 170px;
-    left: 35px;    
+    left: 0;    
     width: 90px;
     rotate: 35deg;
 } 
@@ -281,7 +353,23 @@ header {
    width: 180px;
 } 
 
+@media (max-width: 1000px){
+    .ornamentos .ornamento1-a {
+        display: none;
+    }
+    .ornamentos .ornamento1-b {
+        display: none;
+    }
+    .ornamentos .ornamento2 {
+        display: none;
+    }
+}
+
 @media (max-width: 950px){
+    .contenedor-2{
+        padding: 0;
+    }
+    
     .c2{
         display: flex;
         flex-direction: column-reverse;
@@ -297,14 +385,29 @@ header {
        text-align: center;
     }
 
+    .c2-contenido h1{
+        font-size: 120px;
+        margin-top: 40px;
+        line-height: 95px;
+    }
+    
+    
     .c2-cont-img img{
         margin-top: 25px;
+        margin-bottom: 40px;
     }
+}
+
+    @media (max-width: 500px){
+        .c2-contenido p {
+            width: 300px;
+        }
 }
 
 /*CONTENEDOR-3*/
 
 .contenedor-3{
+    width: 100%;
     padding: 100px 0;
     display: flex;
     flex-direction: column;
@@ -312,15 +415,22 @@ header {
     margin-bottom: 50px;
 }
 
+.c3-contenidos{
+    width: 100%;
+}
+
 .c3-encabezado{
     margin-bottom: 30px;
     position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .c3-encabezado .ornamento1-a{
     position:absolute;
     top: 0px;
-    right: 160px;    
+    right: -80px;    
     width: 40px;
     rotate: 50deg;
 }
@@ -328,24 +438,26 @@ header {
 .c3-encabezado .ornamento1-b{
     position:absolute;
     top: 0px;
-    left: 175px;    
+    left: -90px;    
     width: 40px;
     rotate: 140deg;
 }
+
 .c3-encabezado .ornamento2{
     position:absolute;
-    bottom: -155px;
-    left: 175px;  
+    bottom: -175px;
+    left: -120px;  
     width: 220px;
-    rotate: 160deg;
+    rotate: 150deg;
 }
 
 .c3-encabezado h2{
     color: #3f3f3f;
-    font-size: 61px;
-    line-height: 106px;
+    font-size: 120px;
+    line-height: 117px;
     margin-bottom: 25px;
     text-align: center;
+    width: 500px;
 }
 
 .c3-encabezado p{
@@ -353,6 +465,7 @@ header {
     line-height: 25px;
     margin: 0;
     text-align: center;
+    width: 450px;
 }
 
 .c3-cont-contenido{
@@ -377,6 +490,7 @@ header {
 
 .tabla {
     border-collapse: collapse;
+    width: 85%;
 }
 
 .tabla th{
@@ -457,33 +571,46 @@ form {
     color: #e56820;
 }
 
+@media (max-width: 810px){
+    .c3-encabezado .ornamento1-a {
+        display: none;
+    }
+    .c3-encabezado .ornamento1-b {
+        display: none;
+    }
+    .c3-encabezado .ornamento2 {
+        display: none;
+    }
+    .contenedor-3 {
+        margin-bottom: 0;
+    }
+    .c3-tabla {
+        margin-top: 40px;}
+}
+
 @media (max-width: 780px){
     .c3-tabla {
-        width: 600px;
-        padding: 25px 0;
+        width: 90%;
+
     }
 
     .c3-cont-contenido{
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-
-    .c3-encabezado .ornamento2 {
-        position: absolute;
-        bottom: -165px;
-        left: 0;
-        width: 160px;
-        rotate: 154deg;
-    }
+}
 
     @media (max-width: 700px){
+
+
         .contenedor-3{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding-bottom: 30px;
+            padding-bottom: 75px;
         }
         .c3-encabezado{
             display: flex;
@@ -493,28 +620,13 @@ form {
         }
 
         .c3-encabezado h2{
-            width: 340px;
-            line-height: 56px;
+            width: 500px;
+            line-height: 95px;
+            font-size: 100px;
         }
         
         .c3-encabezado p{
             width: 340px;
-        }
-
-        .c3-encabezado .ornamento1-a{
-            position:absolute;
-            top: 0px;
-            right: 120px;    
-            width: 40px;
-            rotate: 50deg;
-        }
-
-        .c3-encabezado .ornamento1-b{
-            position:absolute;
-            top: 0px;
-            left: 120px;    
-            width: 40px;
-            rotate: 50deg;
         }
 
         .c3-form {
@@ -543,10 +655,6 @@ form {
     }
 
     @media (max-width: 600px){
-        .c3-tabla {
-            width: 470px;
-            padding: 25px 0;
-        }
 
         .tabla td{
             padding: 5px 20px;
@@ -562,27 +670,23 @@ form {
             color: #3f3f3f;
             margin-bottom: 30px;
         }
-
-        .c3-encabezado .ornamento2 {
-            position: absolute;
-            bottom: -165px;
-            left: 100px;
-            width: 111px;
-            rotate: 154deg;
-        }
         .c3-cont-contenido{
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
         }
     }
 
-    @media (max-width: 530px){
-        .c3-tabla {
-            width: 440px;
-            padding: 25px 0;
+
+    @media (max-width: 490px){
+        .c3-encabezado h2{
+            font-size: 85px;
         }
-    }
+
+        th {
+            font-size: 14px;
+        }
 }
 
 
